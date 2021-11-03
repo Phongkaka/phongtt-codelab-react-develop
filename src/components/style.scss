@@ -1,0 +1,244 @@
+@import 'src/resources/styles/mixin';
+
+.components {
+  // Toolbar
+  &.toolbar {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 2px solid #42a5f5;
+  }
+
+  // Text
+  &.text {
+    color: black;
+
+    &.center {
+      text-align: center;
+    }
+
+    &.uppercase {
+      text-transform: uppercase;
+    }
+
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.small {
+      font-size: 12px;
+    }
+
+    &.large {
+      font-size: 20px;
+    }
+
+    &.big {
+      font-size: 30px;
+    }
+
+    &.huge {
+      font-size: 56px;
+    }
+
+    &.enormous {
+      font-size: 80px;
+    }
+  }
+
+  // Button
+  &.button {
+    font-family: 'Karla', sans-serif;
+    position: relative;
+    outline: none;
+    padding: 0 15px;
+    height: 55px;
+    font-size: 18px;
+    background-color: #292929;
+    border-radius: 5px;
+    border: none;
+    overflow: hidden;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    color: #ffd713;
+    text-align: center;
+    transition: background 0.2s;
+
+    &.thin {
+      font-weight: normal;
+    }
+
+    &.small {
+      height: 35px;
+      padding: 0 10px;
+    }
+
+    &.inverted {
+      color: #292929;
+      background-color: transparent;
+
+      &:hover {
+        color: #ffd713;
+      }
+    }
+
+    &.fluid {
+      width: 100%;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      &:hover,
+      &:active {
+        background-color: #292929;
+      }
+    }
+
+    &.loading {
+      &::after,
+      &::before {
+        display: block;
+      }
+
+      &::after {
+        animation: rotation 1s infinite linear;
+      }
+    }
+
+    &:hover {
+      background-color: darken(#292929, 5%);
+    }
+
+    &:active {
+      background-color: darken(#292929, 10%);
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: "";
+      background-color: #292929;
+      display: none;
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 5px solid #ffd713;
+      border-left-color: rgba(255, 215, 19, 0.5);
+      border-right-color: rgba(255, 215, 19, 0.5);
+    }
+  }
+
+  // Dialog
+  &.dialog {
+    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 3px;
+
+    .bp3-dialog-header {
+      border-radius: 3px 3px 0 0;
+      height: 55px;
+      z-index: 1;
+    }
+
+    .bp3-dialog-footer-actions {
+      > * {
+        margin-left: 5px;
+      }
+
+      &.alignCenter {
+        justify-content: center;
+      }
+    }
+
+    &.small {
+      max-width: 350px;
+    }
+
+    &.large {
+      min-width: 600px;
+    }
+  }
+
+  // Pagination Bar
+  &.pagination-bar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    .pagination-button,
+    .pagination-direct-button {
+      width: 35px;
+      height: 35px;
+      border-radius: 3px;
+      margin: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+      color: black;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .pagination-button {
+      background-color: #dceef3;
+      color: #2196f3;
+
+      &.active {
+        background-color: #2196f3;
+        color: white;
+      }
+    }
+
+    .pagination-direct-button {
+      font-size: 17px;
+      color: #2196f3;
+      margin: 0;
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: auto;
+      }
+    }
+
+    .dot-space {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      font-size: 20px;
+      width: 30px;
+      height: 35px;
+      color: #2196f3;
+    }
+  }
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}

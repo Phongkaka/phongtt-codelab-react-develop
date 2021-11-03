@@ -1,0 +1,61 @@
+.name-user {
+  color: #575757;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+    border: none;
+    color: #0C7CFF;
+  }
+}
+.top-header {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.link-to-page {
+  width: 200px;
+  top: 75px;
+  background: #2a3542;
+  color: #ddd;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      .icons-link {
+        position: absolute;
+        left: 20px;
+      }
+      a {
+        display: block;
+        padding: 1em;
+        padding-left: 3em;
+        width: 100%;
+        line-height: 1.2;
+        color: #ddd;
+        text-decoration: none;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+    }
+  }
+}

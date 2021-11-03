@@ -1,0 +1,74 @@
+body {
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  color: #292929;
+  font-size: 16px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+#nprogress {
+  .bar {
+    background: #292929;
+  }
+
+  // .spinner {
+  //   left: 200px;
+  //   top: 20px;
+  //   right: initial;
+  //
+  //   .spinner-icon {
+  //     border-top-color: red;
+  //     border-left-color: red;
+  //   }
+  // }
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  24% { opacity: 0; }
+  26% { opacity: 1; }
+  74% { opacity: 1; }
+  76% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+@keyframes progress-bar-stripes {
+  0% { background-position: 40px 0; }
+  100% { background-position: 0 0; }
+}
+
+.bp3-toast-container-top {
+  padding: 0;
+
+  .bp3-toast {
+    height: 67px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: none;
+    align-items: center;
+  }
+}
+
+.bp3-dialog {
+  margin: 0 15px;
+  background-color: #ffd713 !important;
+
+  .bp3-dialog-header {
+    background-color: #ffd713 !important;
+  }
+}
